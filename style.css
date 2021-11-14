@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@500&display=swap');
+
+:root{
+    --primary-blue: #40A3F8;
+    --grey: #6E5F5F;
+    --black: #3E3E3E;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+li{
+    list-style: none;
+}
+button{
+    border: none;
+}
+img{
+    vertical-align: middle;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    /* overflow: auto; */
+    padding: 0 35px;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.btn-primary{
+    background: var(--primary-blue);
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+.btn-primary:hover{
+    background: rgb(54, 135, 206);
+    transition: all .2s;
+}
+.medium-heading{
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--black);
+    line-height: 4rem;
+}
+.small-heading{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--black);
+    /* line-height: 3rem; */
+}
+.regular-p{
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: var(--black);
+    opacity: 70%;
+    margin-top: 3rem;
+}
+/* ======= Header ======== */
+header{ 
+    height: 100vh;
+    width: 100%;
+    background: rgb(242, 249, 252);
+    background: linear-gradient(144deg, rgba(242, 249, 252,1) 0%, rgba(231,240,247,1) 100%);
+    display: flex; 
+    flex-direction: column;
+}
+.navbar{
+    width: 100%;
+}
+.navbar .container{
+    height: 70px;
+}
+.navlink, .navlink ul{
+    display: flex;
+    align-items: center;
+}
+a.logo{
+    color: var(--primary-blue);
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.navlink ul li a{
+    /* padding: 1rem; */
+    padding: 10px 30px;
+    color: var(--grey);
+    font-weight: 500;
+    opacity: 35%;
+}
+.navlink ul li:first-child a{
+    color: var(--primary-blue);
+    opacity: 1;
+}
+.navlink ul li a:hover{
+    color: var(--primary-blue);
+    opacity: 1;
+    transition: all .3s linear;
+}
+
+/* ===== Hero ==== */
+    
+    /* left hero */
+.hero{
+    height: 100%;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    position: relative;
+}
+.hero .flex{
+    justify-content: flex-start;
+}
+
+.hero-left{
+    width: 35vw;
+}
+.hero-left h1{
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 6rem;
+    color: var(--black);
+}
+.hero-left h1 span{
+    color: var(--primary-blue);
+}
+.hero-left p{
+    color: #757575;
+    opacity: 48%;
+    line-height: 2rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+.find-doctor{
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+}
+.form-control{
+    padding: 1.1em;
+    position: relative;
+}
+.form-control input, .form-control select{
+    padding: 1.5rem 2rem;
+    border: none;
+    background: #F5F6FA;
+    border-radius: 10px;
+    color: var(--black);
+    width: 100%;
+    font-size: 14px;
+}
+::-webkit-input-placeholder{
+    color: rgba(0,0,0,.3);
+    opacity: 1;
+    z-index: 10;
+}
+.form-control .bx-map{
+    position: absolute;
+    left: 18px;
+    top: 25px;
+    font-size: 15px;
+    color: var(--black);
+}
+.form-control .bx-search-alt{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.form-control .btn-primary{
+    padding: 10px 12px;
+}
+
+    /* Right Hero */
+.hero-right{
+    display: flex;
+    position: relative;
+    /* width: 100%; */
+    width: 40vw;
+    height: 100%;
+    margin-left: 4rem;
+}
+.hero-right .wrapper{
+    position: absolute;
+    z-index: 50;
+    bottom: 0;
+}
+.hero-right-img{
+    width: 40vw;
+    z-index: 40;
+    position: relative;
+    bottom: 0;
+}
+.hero-right .wrapper img::before{
+    position: absolute;
+    content: '';
+    z-index: 130;
+    background: #D0E5f1;
+    height: 38vh;
+    width: 38vh;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    box-shadow: 
+    0 0 1px 1px #fff,
+    0 0 1px 40px #d1e5f3,
+    0 0 1px 90px #deedf4;
+}
+
+/* ======== Main ============ */
+    /* Solutions */
+main{
+    background: rgb(249, 253, 253);
+    background: linear-gradient(45deg, rgba(249, 253, 253,1) 0%, rgba(236,246,247,1) 100%);
+}
+.solutions{
+    padding: 6rem 0;
+}
+.solutions .flex{
+    justify-content: center;
+    flex-direction: column;
+}
+.icon-holder{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    /* gap: 8rem; */
+    justify-content: space-between;
+}
+.icon{
+    flex-basis: 30rem;
+    text-align: center;
+}
+.icon p{
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color: rgba(0,0,0,.5);
+    margin-top: 1.8rem;
+}
+/* ===== Doctor ===== */
+.doctor .container{
+    max-width: 100vw;
+}
+.doctor .flex{
+    justify-content: center;
+    gap: 10rem;
+}
+.doctor-left{
+    flex-basis: 70rem;
+}
+.doctor-left img{
+    width: 100%;
+}
+
+/* doctor right */
+.doctor-right{
+    flex-basis: 50rem;
+    height: 100%;
+}
+
+.doctor-right ul{
+    margin: 1.5rem 0;
+}
+.doctor-right li{
+    font-size: 1.6rem;
+    line-height: 3rem;
+    color: var(--black);
+    margin: 1.5rem 0;
+}
+.doctor-right ul li i{
+    color: var(--primary-blue);
+    margin-right: 1.5rem;
+    font-size: 1.6rem;
+}
+.doctor-right .btn-primary{
+    display: inline-block;
+}
+
+/* ========= Services =========== */
+.services{
+    padding: 8rem 0;
+}
+.services-text{
+    text-align: center;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+.services-block{
+    flex-wrap: wrap;
+    margin: 5rem 0;
+}
+.block{
+    flex-basis: 35rem;
+    height: 30rem;
+    background: rgba(255, 255, 255,.2);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5rem 6rem 2rem;
+    box-shadow: 0 0 8rem .5rem rgb(226, 226, 226);
+    border-bottom: 0 inset transparent;
+    transition: all .3s ease-in;
+    margin-top: 2rem;
+}
+.block:hover{
+    border-bottom: 2rem inset var(--primary-blue);
+    background: #fff;
+    transition: all .3s ease;
+}
+.block h3{
+    margin: 1.7rem 0;
+}
+.small-p{
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color: #999;
+    text-align: center;
+    padding: .5rem 0;
+}
+/* ======= Certified ======== */
+.certified{
+    padding: 4rem 0;
+}
+.certified .services-text{
+    max-width: 70rem;
+}
+.doctor-cards{
+    margin-top: 4.5rem;
+}
+.doctor-cards.flex{
+    flex-wrap: wrap;
+}
+.card{
+    margin-top: 2.5rem;
+    padding: 1rem;
+    padding-bottom: 2.5rem;
+    background: #fff;
+    border: 1px solid rgba(238, 239, 241, 0.877);
+    border-radius: 1rem;
+    text-align: center;
+    flex-basis: 26rem;
+    transition: all .3s ease;
+}
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: all .3s;
+    transform: scale(1.02);
+}
+.card h3{
+    margin-top: 2rem;
+}
+.card p{
+    margin-bottom: 2rem;
+}
+.card a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: .5rem;
+}
+.card a{
+    font-size: 2rem;
+    color: #fff;
+    vertical-align:middle;
+}
+.icon-fb{
+    background: #4d77cf;
+}
+.icon-tweet{
+    background: #1da1f2;
+}
+.icon-in{
+    background: #0077b5;
+}
+.doctor-explore a{
+    display: inline-block;
+}
+.doctor-explore{
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+/* =========== Mobile App============ */
+.mobile-app{
+    padding: 10rem 0;
+}
+.mobile-app .container{
+    max-width: 100vw;
+}
+.mobile-app .flex{
+    justify-content: center;
+    gap: 10rem;
+}
+.mobile-left img{
+    width: 100%;
+}
+.mobile-right{
+    flex-basis: 50rem;
+}
+.mobile-right p{
+    margin-bottom: 3rem;
+}
+.mobile-right a{
+    margin-right: 1.3rem;
+}
+
+/* ====== Reviews ======= */
+.reviews h2 {
+    text-align: center;
+}
+.reviews-holder{
+    padding: 6rem 0;
+    flex-wrap: wrap;
+}
+.reviews-holder .card{
+    flex-basis: 34rem;
+    /* height: 37rem; */
+    padding: 2rem 1.5rem 2rem 4.5rem;
+    position: relative;
+}
+.card-quote{
+    position: absolute;
+    content: '';
+    top: -1.6rem;
+    right: 3rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background: var(--primary-blue);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+}
+h4{
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 4rem;
+    color: var(--black);
+}
+.card-text{
+    font-size: 1.6rem;
+    color: #454D5D;
+    line-height: 2.5rem;
+    text-align: left;
+}
+.rev-stars span{
+    color: #ff9000;
+    margin-right: 2.5rem;
+}
+.text-prime-blue{
+    font-size: 1.4rem;
+    color: var(--primary-blue);
+    text-align: left;
+    line-height: 2.5rem;
+}
+/* ======= Book Appointment======== */
+.book-appointment{
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+}
+.book-appointment .wrapper{
+    background: var(--primary-blue);
+    border-radius: 1.5rem;
+    height: 25rem;
+    position: relative;
+}
+.book-appointment .flex{
+    justify-content: center;
+}
+.book-left{
+    padding-left: 5vw;
+    width: 50vw;
+}
+.book-left h2{
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.book-left .btn-primary{
+    color: var(--primary-blue);
+    background: #fff;
+}
+.book-right{
+    position: relative;
+    width: 50vw;
+    height: 100%;
+}
+.book-right img{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+
+
+/* ===== Media Queries ====== */
+
+@media screen and (max-width: 1120px){
+    .services .flex, .certified .flex, .reviews .flex{
+        justify-content: center;
+        gap: 2.5rem;
+    }
+    .hero-left h1{
+        font-size: 3.5rem;
+    }
+    .hero-right img{
+        width: 48vw;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .hero-left h1{
+        font-size: 3rem;
+    }
+    .icon-holder{
+        justify-content: center;
+        gap: 2rem;
+    }
+    .medium-heading{
+        font-size: 3.5rem;
+    }
+    .doctor-left{
+        flex-basis: 60rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-left{
+        width: 60vw;
+    }
+    .hero-right{
+        display: none;
+    }
+    .hero-left h1{
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+    .doctor .flex, .mobile-app .flex {
+        flex-direction: column;
+    }
+}
